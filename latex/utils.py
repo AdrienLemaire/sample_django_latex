@@ -9,7 +9,7 @@ from django.http import HttpResponse
 from django.template.loader import render_to_string
 
 
-def generate_pdf(template, template_vars, filename="test", dest_folder=None):
+def generate_pdf(template, template_vars, filename, dest_folder=None):
     """fill a latex template with django variables, then call pdflatex to
     create a pdf, and return the pdf"""
 

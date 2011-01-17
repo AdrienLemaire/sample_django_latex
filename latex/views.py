@@ -12,7 +12,7 @@ def home(request):
 
 
 def get_pdf(request):
-    filename = request.POST['filename'] or "test"
+    filename = request.POST.get('filename', "test")
     template = 'latex/tex/base.tex'
     template_vars = {'filename': filename}
     return generate_pdf(template, template_vars, filename)

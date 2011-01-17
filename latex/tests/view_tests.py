@@ -19,12 +19,12 @@ class LatexViewTest(TestCase):
         url = reverse("latex:get_pdf")
         response = self.client.post(url)
         self.assertEqual('application/pdf', response['Content-Type'])
-        # Default filename = "test"
-        self.assertTrue("test" in response['Content-Disposition'])
+        # Default filename = "test.pdf"
+        self.assertTrue("test.pdf" in response['Content-Disposition'])
 
         # Test with a specific filename
         url = reverse("latex:get_pdf")
         filename = "blabla"
         response = self.client.post(url, {"filename": filename})
         self.assertEqual('application/pdf', response['Content-Type'])
-        self.assertTrue(filename in response['Content-Disposition'])
+        self.assertTrue("%s.pdf" % filename in response['Content-Disposition'])

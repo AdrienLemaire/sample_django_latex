@@ -37,5 +37,5 @@ def generate_pdf(template, template_vars, filename, dest_folder=None):
     # Return pdf
     result = file(output_filename, 'rb').read()
     response = HttpResponse(result, mimetype='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="%s"' % filename
+    response['Content-Disposition'] = 'attachment; filename="%s.pdf"' % filename
     return response

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block header %}
+  <h1>Sample application to generate pdf using Django and LaTeX</h1>
+{% endblock %}
+
+
+{% block main %}
+  <form action="{% url latex:get_pdf %}" method="post">
+    {% csrf_token %}
+    <input name="filename" placeholder="Write the file name">
+    <input type="submit" value="Create">
+  </form>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!doctype html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Django - LaTeX</title>
+    <meta name="description" content="Simple django app to generate latex pdf">
+    <meta name="author" content="Adrien Lemaire">
+</head>
+
+<body>
+
+  <div id="container">
+      <header>
+        {% block header %}
+        {% endblock %}
+      </header>
+
+      <div id="main" role="main">
+        {% block main %}
+        {% endblock %}
+      </div>
+
+      <footer>
+        {% block footer %}
+        {% endblock %}
+      </footer>
+  </div>
+
+</body>
+</html>

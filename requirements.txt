@@ -1,3 +1,4 @@
 # Lib used by sample_django_latex
 
 Django
+django-coverage # for tests

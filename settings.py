@@ -94,10 +94,12 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'latex',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
 )
 
 TEX_URL = os.path.join(MEDIA_URL, "tex")
+
+try:
+    from local_settings import *
+except:
+    import warnings
+    warnings.warn("You don't have any local_settings defined !")

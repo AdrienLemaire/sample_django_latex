@@ -1,0 +1,3 @@
+# Lib used by sample_django_latex
+
+Django

@@ -4,3 +4,4 @@ media/tex/*
 README.html
 coverage/*
 local_settings.py
+*.swo

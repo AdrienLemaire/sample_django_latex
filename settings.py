@@ -97,6 +97,7 @@ INSTALLED_APPS = (
 )
 
 TEX_URL = os.path.join(MEDIA_URL, "tex")
+DEBUG_PDF = False
 
 try:
     from local_settings import *
